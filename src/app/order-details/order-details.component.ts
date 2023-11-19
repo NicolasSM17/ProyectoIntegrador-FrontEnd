@@ -10,7 +10,7 @@ export class OrderDetailsComponent implements OnInit{
 
   displayedColumns: string[] = ['Id', 'Product Name', 'Name', 'Address', 'Contact No.', 'Status', 'Action'];
   dataSource = [];
-  status: string = 'All';
+  status: string = 'Todo';
 
   constructor(private productService: ProductService){}
 
