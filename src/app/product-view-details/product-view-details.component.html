@@ -18,16 +18,16 @@
                     <h2>{{product.productName}}</h2>
                 </div>
                 <div class="mt-3">
-                    Description: <br>
+                    Descripcion: <br>
                     {{product.productDescription}}
                 </div>
                 <div class="mt-3">
                     <b>S/. {{product.productDiscountedPrice}}</b> &nbsp; &nbsp; <b style="text-decoration: line-through; color: gray;">{{product.productActualPrice}}</b>
                 </div>
                 <div class="mt-5 text-center">
-                    <button mat-raised-button color="warn" style="width: 200px;" (click)="buyProduct(product.productId)">Buy Now</button>
+                    <button mat-raised-button color="warn" style="width: 200px;" (click)="buyProduct(product.productId)">Comprar ahora</button>
                     &nbsp;
-                    <button mat-raised-button style="width: 200px;" (click)="addToCart(product.productId)">Add to Cart</button>
+                    <button mat-raised-button style="width: 200px;" (click)="addToCart(product.productId)">Agregar al Carrito</button>
                 </div>
             </div>
         </div>

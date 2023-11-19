@@ -4,29 +4,29 @@
             <div class="col-6">
                 <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Product Name</mat-label>
-                        <input matInput placeholder="Product Name" [(ngModel)]="product.productName" name="productName">
+                        <mat-label>Nombre del Producto</mat-label>
+                        <input matInput placeholder="Nombre del Producto" [(ngModel)]="product.productName" name="productName">
                     </mat-form-field>
     
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Product Description</mat-label>
-                        <input matInput placeholder="Product Description" [(ngModel)]="product.productDescription" name="productDescription">
+                        <mat-label>Descripcion del Producto</mat-label>
+                        <input matInput placeholder="Descripcion del Producto" [(ngModel)]="product.productDescription" name="productDescription">
                     </mat-form-field>
     
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Product Actual Price</mat-label>
-                        <input matInput placeholder="Product Actual Price" [(ngModel)]="product.productActualPrice" name="productActualPrice">
+                        <mat-label>Precio Actual del Producto</mat-label>
+                        <input matInput placeholder="Precio Actual del Producto" [(ngModel)]="product.productActualPrice" name="productActualPrice">
                     </mat-form-field>
     
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Product Discounted Price</mat-label>
-                        <input matInput placeholder="Product Discounted Price" [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice">
+                        <mat-label>Precio con descuento del producto</mat-label>
+                        <input matInput placeholder="Precio con descuento del producto" [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice">
                     </mat-form-field>
     
                     <div align="end">
                         <button mat-stroked-button color="primary" style="margin-right: 3px;">Clear</button>
-                        <button type="submit" *ngIf="isNewProduct" mat-stroked-button color="primary">Add Product</button>
-                        <button type="submit" *ngIf="!isNewProduct" mat-stroked-button color="primary">Update Product</button>
+                        <button type="submit" *ngIf="isNewProduct" mat-stroked-button color="primary">Agregar Producto</button>
+                        <button type="submit" *ngIf="!isNewProduct" mat-stroked-button color="primary">Actualizar Producto</button>
                     </div>
                 </form>
             </div>
@@ -34,8 +34,8 @@
                 <div>
                     <div class="dropzone" appDrag (files)="fileDropped($event)">
                         <div class="text-wrapper">
-                            <div class="centered">Drag and drop your file or 
-                                <a (click)="selectFile.click()" class="browse-button">browse</a> a file
+                            <div class="centered">Arrastre y suelte su archivo o
+                                <a (click)="selectFile.click()" class="browse-button">busque</a> un archivo
                             </div>
                         </div>
                     </div>

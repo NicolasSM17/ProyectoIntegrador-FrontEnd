@@ -1,8 +1,8 @@
 <div class="container mt-5">
     <mat-form-field appearance="outline" class="w-100">
-        <mat-label>Search any product</mat-label>
-        <input matInput #searchKeyWord (keyup)="searchByKeyword(searchKeyWord.value)" name="searchKey" id="searchKey" placeholder="Search any product">
-        <mat-hint>Search any product</mat-hint>
+        <mat-label>Buscar cualquier producto</mat-label>
+        <input matInput #searchKeyWord (keyup)="searchByKeyword(searchKeyWord.value)" name="searchKey" id="searchKey" placeholder="Buscar cualquier producto">
+        <mat-hint>Buscar cualquier producto</mat-hint>
     </mat-form-field>
 
     <mat-grid-list cols="4" rowHeight="3:5" gutterSize="10">
@@ -21,13 +21,13 @@
                     <b>S/. {{p.productDiscountedPrice}}</b> &nbsp; <b style="text-decoration: line-through; color: gray;">{{p.productActualPrice}}</b>
                 </div>
                 <div class="mt-2">
-                    <button type="button" mat-raised-button color="warn" (click)="showProductDetails(p.productId)">View Details</button>
+                    <button type="button" mat-raised-button color="warn" (click)="showProductDetails(p.productId)">Ver detalles</button>
                 </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
     <div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
-        <button type="button" mat-raised-button color="primary" (click)="loadMoreProduct()">Load more</button>
+        <button type="button" mat-raised-button color="primary" (click)="loadMoreProduct()">Carga más</button>
     </div>
     <div class="mt-5">
 

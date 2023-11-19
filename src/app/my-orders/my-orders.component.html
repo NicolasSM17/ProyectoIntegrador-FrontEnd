@@ -1,22 +1,22 @@
 <div class="container mt-5">
     <table mat-table [dataSource]="myOrderDetails" class="mat-elevation-z8">
         <ng-container matColumnDef="Name">
-            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
             <td mat-cell *matCellDef="let element">{{element.orderFullName}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Contact No.">
-            <th mat-header-cell *matHeaderCellDef>Contact No.</th>
+            <th mat-header-cell *matHeaderCellDef>Número de contacto</th>
             <td mat-cell *matCellDef="let element">{{element.orderContactNumber}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Amount">
-            <th mat-header-cell *matHeaderCellDef>Amount</th>
+            <th mat-header-cell *matHeaderCellDef>Monto</th>
             <td mat-cell *matCellDef="let element">{{element.orderAmount}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Status">
-            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
             <td mat-cell *matCellDef="let element">{{element.orderStatus}}</td>
         </ng-container>
 

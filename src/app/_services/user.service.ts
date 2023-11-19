@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserAuthService } from './user-auth.service';
+import { User } from '../_model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,10 @@ export class UserService {
 
   public forAdmin(){
     return this.httpClient.get(this.PATH_OF_API + '/forAdmin', {responseType: 'text'});
+  }
+
+  public getAllUsers(){
+    return this.httpClient.get<User[]>(this.PATH_OF_API + '/getAllUsers');
   }
 
   public roleMatch(allowedRoles): boolean {

@@ -4,27 +4,27 @@
             <div class="col-6">
                 <form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)">
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Full Name</mat-label>
-                        <input matInput placeholder="Full Name" [(ngModel)]="orderDetails.fullName" name="fullname">
+                        <mat-label>Nombres Completos</mat-label>
+                        <input matInput placeholder="Nombres Completos" [(ngModel)]="orderDetails.fullName" name="fullname">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Full address</mat-label>
-                        <input matInput placeholder="Full address" [(ngModel)]="orderDetails.fullAddress" name="fullAddress">
+                        <mat-label>Direccion Completa</mat-label>
+                        <input matInput placeholder="Direccion Completa" [(ngModel)]="orderDetails.fullAddress" name="fullAddress">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Contact number</mat-label>
-                        <input matInput placeholder="Contact number" [(ngModel)]="orderDetails.contactNumber" name="contactNumber">
+                        <mat-label>Numero de Contacto</mat-label>
+                        <input matInput placeholder="Numero de Contacto" [(ngModel)]="orderDetails.contactNumber" name="contactNumber">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Alternate contact number</mat-label>
-                        <input matInput placeholder="Alternate contact number" [(ngModel)]="orderDetails.alternateContactNumber" name="alternateContactNumber">
+                        <mat-label>Numero de Contacto de emergencia</mat-label>
+                        <input matInput placeholder="Numero de Contacto de emergencia" [(ngModel)]="orderDetails.alternateContactNumber" name="alternateContactNumber">
                     </mat-form-field>
 
                     <div align="right">
-                        <button type="submit" mat-stroked-button color="primary">Place Order</button>
+                        <button type="submit" mat-stroked-button color="primary">Realizar Pedido</button>
                     </div>
                 </form>
             </div>

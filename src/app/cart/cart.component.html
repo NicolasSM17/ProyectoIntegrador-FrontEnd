@@ -1,32 +1,32 @@
 <div class="container mt-5">
     <div align="right" class="mb-3">
-        <button (click)="checkout()" mat-raised-button color="primary">Checkout</button>
+        <button (click)="checkout()" mat-raised-button color="primary">Efectuar</button>
     </div>
     <table mat-table [dataSource]="cartDetails" class="mat-elevation-z8">
         <ng-container matColumnDef="Name">
-            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
             <td mat-cell *matCellDef="let element">{{element.product.productName}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Description">
-            <th mat-header-cell *matHeaderCellDef>Description</th>
+            <th mat-header-cell *matHeaderCellDef>Descripción</th>
             <td mat-cell *matCellDef="let element">{{element.product.productDescription}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Price">
-            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <th mat-header-cell *matHeaderCellDef>Precio</th>
             <td mat-cell *matCellDef="let element">{{element.product.productActualPrice}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Discounted Price">
-            <th mat-header-cell *matHeaderCellDef>Discounted Price</th>
+            <th mat-header-cell *matHeaderCellDef>Precio descontado</th>
             <td mat-cell *matCellDef="let element">{{element.product.productDiscountedPrice}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Action">
-            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <th mat-header-cell *matHeaderCellDef>Acción</th>
             <td mat-cell *matCellDef="let element">
-                <button mat-raised-button color="warn" (click)="delete(element.cartId)">Delete</button>
+                <button mat-raised-button color="warn" (click)="delete(element.cartId)">Borrar</button>
             </td>
         </ng-container>
 

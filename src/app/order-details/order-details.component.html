@@ -1,4 +1,11 @@
 <div class="container mt-5">
+
+    <mat-button-toggle-group aria-label="Font Style">
+        <mat-button-toggle value="All" (click)="getAllOrderDetailsForAdmin('All')">Todo</mat-button-toggle>
+        <mat-button-toggle value="Placed" (click)="getAllOrderDetailsForAdmin('Placed')">Ordenado</mat-button-toggle>
+        <mat-button-toggle value="Delivered" (click)="getAllOrderDetailsForAdmin('Delivered')">Entregado</mat-button-toggle>
+    </mat-button-toggle-group>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <ng-container matColumnDef="Id">
             <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -6,35 +13,35 @@
         </ng-container>
     
         <ng-container matColumnDef="Product Name">
-            <th mat-header-cell *matHeaderCellDef>Product Name</th>
+            <th mat-header-cell *matHeaderCellDef>Nombre del Producto</th>
             <td mat-cell *matCellDef="let element">{{element.product.productName}}</td>
         </ng-container>
     
         <ng-container matColumnDef="Name">
-            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
             <td mat-cell *matCellDef="let element">{{element.user.userFirstName}}</td>
         </ng-container>
     
         <ng-container matColumnDef="Address">
-            <th mat-header-cell *matHeaderCellDef>Address</th>
+            <th mat-header-cell *matHeaderCellDef>Direccion</th>
             <td mat-cell *matCellDef="let element">{{element.orderFullOrder}}</td>
         </ng-container>
     
         <ng-container matColumnDef="Contact No.">
-            <th mat-header-cell *matHeaderCellDef>Contact No.</th>
+            <th mat-header-cell *matHeaderCellDef>Numero de Contacto</th>
             <td mat-cell *matCellDef="let element">{{element.orderContactNumber}}</td>
         </ng-container>
     
         <ng-container matColumnDef="Status">
-            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
             <td mat-cell *matCellDef="let element">{{element.orderStatus}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Action">
-            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <th mat-header-cell *matHeaderCellDef>Accion</th>
             <td mat-cell *matCellDef="let element">
                 <button *ngIf="element.orderStatus == 'Placed'" mat-raised-button color="primary" 
-                        (click)="markAsDelivered(element.orderId)">Mark as Delivered</button>
+                        (click)="markAsDelivered(element.orderId)">Marcar como entregado</button>
             </td>
         </ng-container>
     
