@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   PATH_OF_API = "http://localhost:9090";
-  PATH_OF_API_PROD = "https://proyectointegrador-backend-production.up.railway.app:7528";
+  PATH_OF_API_PROD = "https://proyectointegrador-backend-production.up.railway.app";
 
   constructor(private httpClient: HttpClient) { }
 

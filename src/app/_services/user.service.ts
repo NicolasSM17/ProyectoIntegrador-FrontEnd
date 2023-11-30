@@ -9,7 +9,7 @@ import { User } from '../_model/user.model';
 export class UserService {
 
   PATH_OF_API = "http://localhost:9090";
-  PATH_OF_API_PROD = "https://proyectointegrador-backend-production.up.railway.app:7528";
+  PATH_OF_API_PROD = "https://proyectointegrador-backend-production.up.railway.app";
   requestHeader = new HttpHeaders( {"No-Auth":"True"} );
 
   constructor(private httpClient: HttpClient, 
